@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env python
+"""Django's command-line utility for administrative tasks."""
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05
 import os
 import sys
 

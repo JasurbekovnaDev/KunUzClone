@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
@@ -241,3 +242,8 @@ def search_view(request):
     else:
         # Если результаты найдены, передаем их в шаблон для отображения
         return render(request, 'news/search_results.html', {'all_news': results, 'query': query})
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05

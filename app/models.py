@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # from django.contrib.auth.models import User
 # from django.db import models
 from django.contrib.auth.models import User
@@ -33,26 +34,45 @@ class Video(models.Model):
         return self.title
 
 
+=======
+from django.db import models
+from django.utils import timezone
+
+# Create your models here.
+
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05
 class Category(models.Model):
     name = models.CharField(max_length=150)
 
     def __str__(self):
         return self.name
 
+<<<<<<< HEAD
 
 class News(models.Model):
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
         Published = 'PB', 'Published'
+=======
+class News(models.Model):
+    class Status(models.TextChoices):
+        DRAFT = 'DF', 'Draft'
+        Published = 'PU', 'Published'
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05
 
     title = models.CharField(max_length=300)
     slug = models.SlugField(max_length=300)
     body = models.TextField()
+<<<<<<< HEAD
     image = models.ImageField(upload_to='news/images', null=True)
+=======
+    image = models.ImageField(upload_to='new/images', null=True)
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     publish_time = models.DateTimeField(default=timezone.now)
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
+<<<<<<< HEAD
     status = models.CharField(max_length=2,
                               choices=Status.choices,
                               default=Status.DRAFT)
@@ -62,10 +82,17 @@ class News(models.Model):
 
     class Meta:
         ordering = ["-publish_time"]
+=======
+    status = models.CharField(max_length=2, choices=Status.choices ,default=Status.DRAFT)
+
+    class Meta:
+        ordering = ['-publish_time']
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05
 
     def __str__(self):
         return self.title
 
+<<<<<<< HEAD
     def get_absolute_url(self):
         return reverse("news_detail_page", args=[self.slug])
 
@@ -107,3 +134,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment = {self.body} by {self.user}"
+=======
+
+>>>>>>> 35b99e54e67e3aa1ffd73e07756b09f25fa2da05
